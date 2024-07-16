@@ -1,0 +1,32 @@
+{
+  "name": "ts-api-docs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "vitest run",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{ts,tsx,md,scss}\"",
+    "prepare": "husky install",
+    "lint": "eslint '/**/*.{ts}' --fix",
+    "lint-staged": "lint-staged"
+  },
+  "keywords": [],
+  "author": "cgoing",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "9.x",
+    "globals": "^15.8.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^13.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1",
+    "vitest": "^2.0.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "prettier --write",
+      "eslint --max-warnings 0"
+    ]
+  }
+}
